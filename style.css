@@ -1,4 +1,9 @@
 /* Right-align the contacts section in the footer */
+:root {
+  --special-color: rgb(191, 151, 122);
+  background-color: rgb(242, 246, 247);
+}
+
 .contacts {
     display: flex;
   text-align: right;
@@ -23,7 +28,7 @@ p {
 .primary-font {
   font-family: "Garamond", serif;
   font-optical-sizing: auto;
-  font-weight: 600;
+  font-weight: 550;
   font-style: normal;
   font-size: 3rem;
 }
@@ -33,6 +38,57 @@ p {
   font-weight: 400;
   font-style: normal;
   font-size: 1.1rem;
+}
+
+.logo {
+  width: 150px; /* Set your desired width */
+  height: auto; /* Automatically adjusts to prevent distortion */
+}
+
+.navbar {
+  position: fixed; /* helps keep the navbar stick to top*/
+  top: 0; /* helps keep the navbar stick to top*/
+  z-index: 999; /* Keeps navbar above other content */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  background: rgb(236, 238, 247); /* Optional background */
+  border-radius: 5px;
+  margin: 10px auto;
+  box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.2); /* h v blur spread color */
+}
+
+.hero {
+  width: 100%;
+  padding-top: 10px;
+  display: flex;
+  align-items: self-end;
+  justify-content: baseline;
+  flex-wrap: wrap;
+}
+
+.horizontal-menu {
+  display: flex; /* Aligns items in a row */
+  list-style: none; /* Removes bullet points */
+  padding: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
+}
+
+.horizontal-menu li {
+  padding: 10px 10px; /* Adds spacing around menu items */
+}
+
+.horizontal-menu a {
+  color: rgb(11, 13, 34);
+  text-decoration: none; /* Removes underlines */
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.horizontal-menu a:hover {
+  color: var(--special-color);
 }
 
 footer {
