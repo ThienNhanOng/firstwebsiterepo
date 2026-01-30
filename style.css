@@ -91,6 +91,14 @@ p {
   color: var(--special-color);
 }
 
+
+.DisplayContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
 footer {
   margin-top: auto; /* Adjust based on footer height */
   width: 100%;
@@ -102,3 +110,4 @@ footer {
   display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
