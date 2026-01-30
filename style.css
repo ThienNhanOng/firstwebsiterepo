@@ -1,3 +1,21 @@
+/* Right-align the contacts section in the footer */
+.contacts {
+    display: flex;
+  text-align: right;
+  
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
 p {
   line-height: 1.6; /* Sets line spacing to 1.6 times the font size */
@@ -18,15 +36,13 @@ p {
 }
 
 footer {
-  width: 99%;
-  /* position: fixed; */
-  bottom: 0;
-  z-index: 999;
+  margin-top: auto; /* Adjust based on footer height */
+  width: 100%;
+  height: auto;
+  background: rgb(191, 151, 122); /* Background color for footer */
+  padding: 10px -40px; /* spacing for footer */
+  box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.2); 
+  text-align: left;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  background: rgb(236, 238, 247); /* Optional background */
-  /* max-width: fit-content; */
-  padding: 40px;
-  gap: 20px;
-  box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.2); /* h v blur spread color */
+    grid-template-columns: 1fr 1fr;
 }
