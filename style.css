@@ -25,6 +25,7 @@ body {
   padding-top: 200px;
   flex: 1 0 auto; /* Allows the content to grow and fill available space */
   display: flex;
+  font-size: 1.25rem; /* Font size */
 }
 
 
@@ -97,13 +98,47 @@ p {
   color: var(--special-color);
 }
 
-
 .DisplayContent {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
   padding: 20px;
   min-height: 80vh;
+  text-align: center;
+}
+
+/* policy configuration */
+.policy-links {
+  list-style: none;
+  padding: 0;
+}
+/* hover and idle color change */
+.policy-links a {
+  color: rgb(11, 13, 34);
+  text-decoration: none;
+}
+.policy-links a:hover {
+  color: white;
+}
+
+/* button customization */
+button {
+  font-family: "Garamond", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 6px 24px;
+  background-color: rgb(169, 176, 255);
+  color: white; /* for text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+button:hover {
+  background-color: rgb(182, 228, 247);
+  transform: translateY(-10px);
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
 }
 
 footer {
