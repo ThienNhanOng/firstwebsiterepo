@@ -1,7 +1,15 @@
-/* Right-align the contacts section in the footer */
 :root {
-  --special-color: rgb(191, 151, 122);
-  background-color: rgb(242, 246, 247);
+  --special-color: rgb(141, 40, 161);
+  background-color: rgb(247, 248, 243);
+  --footer-text-color: rgb(250, 253, 248);
+}
+
+.special-color {
+  color: var(--special-color);
+}
+
+.footer-text-color {
+  color: var(--footer-text-color);
 }
 
 .contacts {
@@ -61,9 +69,9 @@ p {
   align-items: center;
   justify-content: space-around;
   flex-wrap: nowrap;
-  background: rgb(236, 238, 247); /* Optional background */
+  background: rgb(235, 238, 224); /* Optional background */
   border-radius: 5px;
-  margin: 10px auto;
+  margin: 0px auto; /* keep at the VERY top of the screen */
   box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.2); /* h v blur spread color */
 }
 
@@ -98,13 +106,40 @@ p {
   color: var(--special-color);
 }
 
-.DisplayContent {
+.banner {
+  margin: 10px auto;
+  display: grid;
+  max-width: 95%;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  justify-items: center;
+  align-items: center;
+  gap: 40px;
+  background: rgb(235, 238, 224);
+  box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.2);
+}
+
+.banner-image {
+  width: 40vw;
+  display: inline-block;
+}
+
+.display-content {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
   padding: 20px;
   min-height: 80vh;
   text-align: center;
+}
+
+.card {
+  background-color: rgb(235, 238, 224);
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.1),
+    0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* policy configuration */
@@ -114,11 +149,11 @@ p {
 }
 /* hover and idle color change */
 .policy-links a {
-  color: rgb(11, 13, 34);
+  color: var(--footer-text-color);
   text-decoration: none;
 }
 .policy-links a:hover {
-  color: white;
+  color: var(--special-color);
 }
 
 /* button customization */
@@ -127,7 +162,7 @@ button {
   font-size: 1rem;
   font-weight: 600;
   padding: 6px 24px;
-  background-color: rgb(169, 176, 255);
+  background-color: rgb(177, 102, 192);
   color: white; /* for text */
   border: none;
   border-radius: 5px;
@@ -141,17 +176,41 @@ button:hover {
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
 }
 
+.news-letter-container {
+  position: relative; /* Essential for positioning the pseudo-element */
+  width: 100%;
+  height: 600px;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.news-letter-container::before {
+  content: "";
+  background-image: url("../Assets/NewsletterBG.jpg");
+  background-size: cover;
+  position: absolute;
+  /* top: 0;
+    left: 0; */
+  width: 100%;
+  height: 100%;
+  opacity: 0.9; /* Set desired opacity here (0.0 to 1.0) */
+  z-index: -1; /* Places the image behind the container's content */
+}
+
 footer {
   /*margin-top: auto;  Adjust based on footer height */
   position-anchor: bottom;
   width: 100%;
   height: auto;
-  background: rgb(191, 151, 122); /* Background color for footer */
+  background: rgb(44, 24, 58); /* Background color for footer */
   padding: 10px; /* spacing for footer */
   box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.2); 
   text-align: left;
   display: grid;
-    grid-template-columns: 1fr 1fr;
-  
+  grid-template-columns: 1fr 1fr;
 }
 
