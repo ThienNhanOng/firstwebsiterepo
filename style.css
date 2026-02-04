@@ -214,3 +214,46 @@ footer {
   grid-template-columns: 1fr 1fr;
 }
 
+/* for smaller screen */
+@media screen and (max-width: 768px) {
+  body {
+    width: 90%;
+    margin: 0 auto;
+    padding: auto;
+  }
+  .horizontal-menu li {
+    padding: 5px 5px; /* Adds spacing around menu items */
+  }
+
+  .banner {
+    width: fit-content;
+    display: flex; /* Hide an element on small screens */
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    justify-items: baseline;
+    align-items: flex-start;
+  }
+  .banner-image {
+    width: 85vw;
+  }
+
+  .display-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+    padding: 5px;
+  }
+
+  .email-div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  footer {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr;
+    padding: 10px;
+    gap: 10px;
+  }
+}
